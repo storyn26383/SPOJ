@@ -6,14 +6,14 @@ int main(void) {
     scanf("%d", &n);
 
     for (int i = n; i > 0; i--) {
-        int line, len, size;
+        int row, column, size;
 
-        scanf("%d %d %d", &line, &len, &size);
+        scanf("%d %d %d", &row, &column, &size);
 
         size++;
 
-        for (int j = 0; j < line * size + 1; j++) {
-            for (int k = 0; k < len * size + 1; k++) {
+        for (int j = 0; j < row * size + 1; j++) {
+            for (int k = 0; k < column * size + 1; k++) {
                 if (0 == j % size || 0 == k % size) {
                     printf("*");
                 } else if ((!(j / size & 1) && !(k / size & 1)) || (j / size & 1 && k / size & 1)) {

@@ -6,15 +6,15 @@ int main(void) {
     scanf("%d", &n);
 
     for (int i = n; i > 0; i--) {
-        int line, len;
+        int row, column;
         char *map = ".*";
 
-        scanf("%d %d", &line, &len);
+        scanf("%d %d", &row, &column);
 
-        for (int j = 1; j <= line * 3 + 1; j++) {
+        for (int j = 1; j <= row * 3 + 1; j++) {
             int flag;
 
-            for (int k = 1; k <= len * 3 + 1; k++) {
+            for (int k = 1; k <= column * 3 + 1; k++) {
                 flag = 1 == j % 3 || 1 == k % 3;
 
                 printf("%c", map[flag]);

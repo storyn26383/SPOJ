@@ -6,16 +6,16 @@ int main(void) {
     scanf("%d", &n);
 
     for (int i = n; i > 0; i--) {
-        int line, len;
+        int row, column;
         char *map = ".*";
 
-        scanf("%d %d", &line, &len);
+        scanf("%d %d", &row, &column);
 
-        for (int j = 1; j <= line; j++) {
+        for (int j = 1; j <= row; j++) {
             int flag;
 
-            for (int k = 1; k <= len; k++) {
-                flag = 1 == j || line == j || 1 == k || len == k;
+            for (int k = 1; k <= column; k++) {
+                flag = 1 == j || row == j || 1 == k || column == k;
 
                 printf("%c", map[flag]);
             }
